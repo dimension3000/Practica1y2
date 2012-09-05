@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Practica 6</title>
+    </head>
+    <body>
+        <h1>Completar Registro de Usuario</h1><br />
+		<form action="x" method="post">
+			<fieldset>
+				<legend>Usuario</legend><br />
+				<label for="usuario">Usuario</label>
+				<input type="text" id="usuario" name="usuario" value="UsuarioX" disabled/><br /><br />
+				<label for="correo">Correo</label>
+				<input type="email" id="correo" name="correo" value="user@hotmail.com" disabled/><br /><br />
+				<label for="contra">Confirme su contraseña</label>
+				<input type="password" id="contra" name="contra"/><br /><br />
+				<fieldset>
+					<legend>Datos Personales</legend><br />
+					<label for="nombre">Nombre completo</label>
+					<input type="text" id="nombre" name="nombre"/><br /><br />
+					<label for="imagen">Imagen de usuario</label>
+					<input id="imagen" name="imagen" type="file" accept="image/*" /><br /><br />
+					<label for="direccion">Direccion</label>
+					<input type="text" id="direccion" name="direccion"/><br /><br />
+					<label for="telefono">Telefono</label>
+					<input type="tel" id="telefono" name="telefono"/><br /><br />
+					<label for="fecha">Fecha de nacimiento</label>
+					<input type="date" id="fecha" name="fecha"/><br /><br />
+					<label for="sexo">Sexo</label><br />
+					<input type="radio" id="sexo" name="sexo" value="H" />Masculino<br />
+	                <input type="radio" id="sexo1" name="sexo" value="M" />Femenino<br />
+				</fieldset>
+				<br />
+				<fieldset>
+					<legend>Informacion Adicional</legend><br />
+					<label for="lista">¿Como te enteraste de nosotros?</label>
+					<select name="lista" id="lista">
+					   <option selected value="0">Elige una opción</option>
+				       <option value="1">Recomendacion</option> 
+				       <option value="2">Pagina web</option> 
+				       <option value="3">Television</option> 
+				       <option value="4">Periodico</option> 
+				       <option value="5">Otro</option>  
+					</select>
+				</fieldset>
+				<br />
+				<button type="reset">Limpiar</button>
+				<button type="submit">Enviar</button>
+			</fieldset>
+		</form>
+    </body>
+</html>
