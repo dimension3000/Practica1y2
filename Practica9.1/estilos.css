@@ -1,0 +1,41 @@
+.encabezado {
+	color:#004000;
+}
+
+a,span{
+	color:green;
+}
+
+*{
+	margin:5px;
+}
+
+.navegacion {
+	/*height:15px;*/
+	width:100%;
+	color:green;
+	border:double;
+}
+
+.articulo {
+	height:auto;
+	width:70%;
+	border:outset;
+	border-color:#008000;
+	padding:10px;
+}
+
+.contenedor_derecho {
+	height:auto;
+	width:24%;
+	font-weight:bold;
+	border:outset;
+	border-color:#008000;
+	padding:10px;
+}
+
+.pie {
+	height:auto;
+	width:auto;
+	font-style:italic;
+}
