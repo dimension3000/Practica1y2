@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Practica 5</title>
+		<script type="text/javascript">
+			function valida_envia(){ 
+			   	//valida el nick 
+			   	if (document.form1.nick.value.length==0){ 
+					 document.getElementById("error1").style.display=''; 
+			      	 document.form1.nick.focus();
+			      	 return 0; 
+			   	}
+				else
+					document.getElementById("error1").style.display='none'; 
+			   	//valida el correo 
+			   	if (!/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,3})$/.test(document.form1.correo.value)){
+				   document.getElementById("error2").style.display='';
+				   document.form1.correo.focus();
+				   return 0;
+				}
+				else
+					document.getElementById("error2").style.display='none';
+			   	//valida que existan contraseñas 
+				if(document.form1.contra.value.length==0 || document.form1.contra2.value.length==0){
+					document.getElementById("error3").style.display='';
+				    document.form1.contra.focus();
+				    return 0;	
+				}
+				else
+					document.getElementById("error3").style.display='none';
+				//valida que sean iguales las contraseñas
+			   	if (document.form1.contra.value != document.form1.contra2.value) {
+				   document.getElementById("error4").style.display='';
+				   document.form1.contra.focus();
+				   return 0;
+				}
+				else
+					document.getElementById("error4").style.display='none';
+				//el formulario se envia  
+			   	document.form1.botonSubmit.click();
+			} 
+		</script>
+    </head>
+    <body>
+        <h1>Registro</h1>
+		<fieldset>
+			<form name="form1" action="x" method="post">
+				<label for="nick">Ingrese su nick: </label>
+				<input type="text" id="nick" name="nick" required maxlength="15"/>
+				<div id="error1" name="bla" style="display:none; color:Red;">Es necesario que escriba su nick</div>
+				<br/><br/>
+				<label for="correo">Ingrese su correo: </label>
+				<input type="email" id="correo" name="correo" required maxlength="20"/>
+				<div id="error2" style="display:none; color:Red;">Es necesario que escriba su correo</div>
+				<br/><br/>
+				<label for="contra">Ingrese su contraseÃ±a: </label>
+				<input type="password" id="contra" name="contra" required maxlength="20"/>
+				<br/><br/>
+				<label for="contra2">Confirme su contraseÃ±a: </label>
+				<input type="password" id="contra2" name="contra2" required maxlength="20"/>
+				<div id="error3" style="display:none; color:Red;">Es necesaria la contraseña en ambos espacios</div>
+				<div id="error4" style="display:none; color:Red;">Las contraseñas deben de ser iguales</div>
+				<br/><br/>
+				<button type="button" onclick="valida_envia()">Enviar</button>
+				<button type="submit" style="display:none;" name="botonSubmit"></button>
+			</form>
+		</fieldset>
+    </body>
+</html>
