@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Practica 6</title>
+		<script type="text/javascript">
+			function valida_envia(){ 
+			   	//valida que exista contraseña 
+			   	if (document.form1.contra.value.length==0){ 
+					 document.getElementById("error1").style.display=''; 
+			      	 document.form1.contra.focus();
+			      	 return 0; 
+			   	}
+				else
+					document.getElementById("error1").style.display='none';
+				//valida que exista nombre
+			   	if (document.form1.nombre.value.length==0){ 
+					 document.getElementById("error2").style.display=''; 
+			      	 document.form1.nombre.focus();
+			      	 return 0; 
+			   	}
+				else
+					document.getElementById("error2").style.display='none';
+				//valida que exista direccion
+			   	if (document.form1.direccion.value.length==0){ 
+					 document.getElementById("error3").style.display=''; 
+			      	 document.form1.direccion.focus();
+			      	 return 0; 
+			   	}
+				else
+					document.getElementById("error3").style.display='none';
+				//valida el telefono
+			   	if (!/^[0-9]{2,3}-? ?[0-9]{6,7}$/.test(document.form1.telefono.value) || document.form1.telefono.value.length==0){
+				   document.getElementById("error7").style.display='';
+				   document.form1.telefono.focus();
+				   return 0;
+				}
+				else
+					document.getElementById("error7").style.display='none';	
+			    //valida la fecha
+			   	if (!/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(document.form1.fecha.value) || document.form1.fecha.value.length==0){
+				   document.getElementById("error4").style.display='';
+				   document.form1.fecha.focus();
+				   return 0;
+				}
+				else
+					document.getElementById("error4").style.display='none';
+				//valida el sexo	
+			   	if (!document.form1.sexo[0].checked && !document.form1.sexo[1].checked){ 
+			       document.getElementById("error5").style.display='';
+				   return 0;
+				}
+				else
+					document.getElementById("error5").style.display='none';
+				//valida el campo de lista	
+			   	if (document.form1.lista.selectedIndex==0){ 
+			       document.getElementById("error6").style.display='';
+				   document.form1.lista.focus();
+				   return 0;
+				}
+				else
+					document.getElementById("error6").style.display='none';
+				//el formulario se envia  
+			   	document.form1.botonSubmit.click();
+			} 
+		</script>
+    </head>
+    <body>
+        <h1>Completar Registro de Usuario</h1><br />
+		<form name="form1" action="x" method="post">
+			<fieldset>
+				<legend>Usuario</legend><br />
+				<label for="usuario">Usuario</label>
+				<input type="text" id="usuario" name="usuario" value="UsuarioX" disabled/><br /><br />
+				<label for="correo">Correo</label>
+				<input type="email" id="correo" name="correo" value="user@hotmail.com" disabled/><br /><br />
+				<label for="contra">Escriba su contraseña</label>
+				<input type="password" id="contra" name="contra" required maxlength="18"/>
+				<div id="error1" style="display:none; color:Red;">Es necesario que escriba su contraseña</div>
+				<br /><br />
+				<fieldset>
+					<legend>Datos Personales</legend><br />
+					<label for="nombre">Nombre completo</label>
+					<input type="text" id="nombre" name="nombre" required maxlength="30"/>
+					<div id="error2" style="display:none; color:Red;">Es necesario que escriba su nombre</div>
+					<br /><br />
+					<label for="imagen">Imagen de usuario</label>
+					<input id="imagen" name="imagen" type="file" accept="image/*"/><br /><br />
+					<label for="direccion">Direccion</label>
+					<input type="text" id="direccion" name="direccion" required maxlength="30"/>
+					<div id="error3" style="display:none; color:Red;">Es necesario que escriba su direccion</div>
+					<br /><br />
+					<label for="telefono">Telefono</label>
+					<input type="tel" id="telefono" name="telefono" required maxlength="16"/>
+					<div id="error7" style="display:none; color:Red;">Es necesario que escriba un telefono valido</div>
+					<br /><br />
+					<label for="fecha">Fecha de nacimiento</label>
+					<input type="date" id="fecha" name="fecha"/>
+					<div id="error4" style="display:none; color:Red;">Es necesario una fecha valida</div>
+					<br /><br />
+					<label for="sexo">Sexo</label><br />
+					<input type="radio" id="sexo" name="sexo" value="H" />Masculino<br />
+	                <input type="radio" id="sexo1" name="sexo" value="M" />Femenino<br />
+					<div id="error5" style="display:none; color:Red;">Es necesario que identifique su sexo</div>
+				</fieldset>
+				<br />
+				<fieldset>
+					<legend>Informacion Adicional</legend><br />
+					<label for="lista">¿Como te enteraste de nosotros?</label>
+					<select name="lista" id="lista">
+					   <option selected value="0">Elige una opción</option>
+				       <option value="1">Recomendacion</option> 
+				       <option value="2">Pagina web</option> 
+				       <option value="3">Television</option> 
+				       <option value="4">Periodico</option> 
+				       <option value="5">Otro</option>  
+					</select>
+					<div id="error6" style="display:none; color:Red;">Elija una opcion de la lista</div>
+				</fieldset>
+				<br />
+				<button type="reset">Limpiar</button>
+				<button type="button" onclick="valida_envia()">Enviar</button>
+				<button type="submit" style="display:none;" name="botonSubmit"></button>
+			</fieldset>
+		</form>
+    </body>
+</html>
