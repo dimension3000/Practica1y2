@@ -100,7 +100,15 @@
 						function agregaInput()
 						{
 							br = document.createElement('br');
+							br.setAttribute('id','br'+i);
 							label = document.createElement('label');
+							label.setAttribute('id','label'+i);
+							boton = document.createElement('button');
+							boton.setAttribute('type','button');
+							boton.setAttribute('id','boton'+i);
+							boton.setAttribute('onclick','borrarElemento('+i+')');
+							textoBoton = document.createTextNode('Eliminar');
+							boton.appendChild(textoBoton);
 							textoLabel = document.createTextNode('Telefono '+i+' ');
 							label.appendChild(textoLabel);
 				    		input = document.createElement('input');
@@ -111,9 +119,19 @@
 							x.parentNode.insertBefore(br,x);
 							x.parentNode.insertBefore(label,x);
 							x.parentNode.insertBefore(input,x);
+							x.parentNode.insertBefore(boton,x);
 							i++;
 						}
-						
+						function borrarElemento(i){
+							x = document.getElementById('boton'+i);
+							y = document.getElementById('tel'+i);
+							z = document.getElementById('label'+i);
+							w = document.getElementById('br'+i);
+							x.parentNode.removeChild(x);
+							y.parentNode.removeChild(y);
+							z.parentNode.removeChild(z);
+							w.parentNode.removeChild(w);
+						}
 			    	</script>
 					<label for="fecha" id="labelFecha">Fecha de nacimiento</label>
 					<input type="date" id="fecha" name="fecha"/>
@@ -146,3 +164,4 @@
 		</form>
     </body>
 </html>
+
