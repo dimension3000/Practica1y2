@@ -1,0 +1,208 @@
+/* CSS Document */
+
+/*************CONTENEDORS****************/
+
+body{
+	background-image: url('../img/Bottom_texture.jpg');
+	background-attachment: fixed;
+	text-align: center;
+	font-size: 13px;
+	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+
+#content{
+	width: 950px;
+	margin: 0% 8%;
+	font-family: Geneva, Arial, Helvetica, sans-serif;			
+	background-color: #ffffff;
+	border-radius: 7px;
+	text-align: left;
+
+}
+
+.navbar{
+	display:block;
+	margin:0% 29%;
+}
+
+.navbar ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.navbar li{
+	float:left;
+}
+.navbar a:link,a:visited{
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#FF6633;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+.navbar a:hover,a:active{
+	background-color:#7A991A;
+}
+
+
+
+
+
+
+
+
+#header{
+	height:60px;
+	font-size: 24px;
+	font-family: Arial, Verdana, sans-serif;
+	border-radius: 7px;
+	margin: 5px;
+
+}
+
+.enviar{
+	width: 250px;
+	height: 50px;
+	margin: 0px;	
+	padding: 0px 3px;
+	float:right;
+}
+
+.enviar li{
+	display: block;
+	border:solid;
+	text-align: center;
+	margin-top:8%;
+	border-radius: 7px;
+}
+
+.enviar li a {
+	display: block;
+	text-decoration: none;
+
+}
+
+
+.box{
+	border-style: solid;
+	margin: .4em;
+	padding: 8px;
+	border-radius: 7px;
+
+}
+
+.boxtitulo h3 {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+.boxtituloinfo {
+	display:inline;
+	float:right;
+}
+
+.boxcomment{
+/*	height: 100px;	*/
+	margin-top: 5px;
+	padding: 0px;
+}
+
+.boxfooter {
+	margin: 0px;
+	padding: 0px;
+}
+
+.enlaza{
+	float: right;
+}
+
+#footer{
+	height: 40px;
+/*	border-style:solid;		*/
+	clear:both;
+	margin: .4em;
+}
+
+
+.atras{
+	width: 100px;
+	margin-left:0px;
+	margin-top: 7px;
+	padding: 0px;
+	float:left;
+	border-radius: 7px;
+}
+
+.atras li{
+	display: block;
+	border:solid;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.atras li a {
+	display: block;
+	text-decoration: none;
+}
+
+
+.calendar{
+	width: 100px;
+	margin-top: 0px;
+	margin-left: 30%;
+	padding: 0px;	
+	float:left;
+
+}
+
+.calendar li{
+	display: block;
+	border:solid;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.calendar li a {
+	display: block;
+	text-decoration: none;
+	border-radius: 7px;
+}
+
+
+
+.adelante{
+	width: 100px;
+	margin-top: 7px;
+	margin-left: 38%;
+	padding: 0px;	
+	float:left;
+}
+
+.adelante li{
+	display: block;
+	border:solid;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.adelante li a {
+	display: block;
+	text-decoration: none;
+}
+
+h1, p{
+	display:inline;
+	text-align:center;
+}
+
+.cat, .dif, .ini, .end, h4{
+	display:inline;
+	text-align:center;
+}
+
